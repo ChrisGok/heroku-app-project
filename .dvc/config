@@ -1,0 +1,6 @@
+[core]
+    remote = s3_remote
+['remote "myremote"']
+    url = s3://dvc-bucket-cg-app
+['remote "s3_remote"']
+    url = s3://dvc-bucket-cg-app
