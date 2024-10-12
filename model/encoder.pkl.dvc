@@ -1,0 +1,6 @@
+outs:
+- md5: d25583cc765eb0083cbee5c29844e9d9
+  size: 2020
+  isexec: true
+  hash: md5
+  path: encoder.pkl

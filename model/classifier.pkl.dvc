@@ -1,0 +1,6 @@
+outs:
+- md5: 686ceeecaa56a0a05e00402b2d1c447c
+  size: 73828564
+  isexec: true
+  hash: md5
+  path: classifier.pkl
