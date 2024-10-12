@@ -1,6 +1,6 @@
 import requests
 
-response = requests.post('url/to/query')
+response = requests.post('cg-census-pred-app.herokuapp.com')
 
 print(response.status_code)
 print(response.json())
