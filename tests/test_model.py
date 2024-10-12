@@ -1,3 +1,9 @@
+import sys
+import os
+
+# Add the project root to sys.path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import pytest
 import pandas as pd
 import pickle
@@ -17,12 +23,12 @@ cat_features = [
 
 @pytest.fixture
 def census_data():
-    df = pd.read_csv("../data_clean/census_clean.csv")
+    df = pd.read_csv("./data_clean/census_clean.csv")
     return df
 
 @pytest.fixture
 def model():
-    model = pickle.load(open("../model/classifier.pkl","rb"))
+    model = pickle.load(open("./model/classifier.pkl","rb"))
     return model
 
 """ @pytest.fixture

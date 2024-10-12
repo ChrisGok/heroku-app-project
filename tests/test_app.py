@@ -1,6 +1,12 @@
+import sys
+import os
+
+# Add the project root to sys.path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from fastapi.testclient import TestClient
 
-from main import app
+from app.main import app
 
 client = TestClient(app)
 
@@ -12,7 +18,7 @@ def test_get():
 
 def test_post_data_success():
     input_data = {
-                'age': 35,
+                'age': 50,
                 'workclass': 'Private',
                 'fnlgt': 280464,
                 'education': 'Some-college',
