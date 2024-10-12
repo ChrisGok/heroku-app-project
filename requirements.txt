@@ -1,0 +1,9 @@
+pandas 
+scikit-learn
+pydantic
+pytest
+flake8
+fastapi
+requests
+numpy
+uvicorn
