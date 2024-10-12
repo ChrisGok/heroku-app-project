@@ -7,3 +7,4 @@ fastapi
 requests
 numpy
 uvicorn
+httpx
