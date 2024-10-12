@@ -7,12 +7,12 @@ import os
 import json
 import pandas as pd
 import pickle
-from ml.data import process_data
-from ml.model import train_model, compute_model_metrics, inference
+from data import process_data
+from model import train_model, compute_model_metrics, inference
 
 # Add code to load in the data.
 
-data = pd.read_csv(os.path.join(os.getcwd(),'data_clean','census_clean.csv'))
+data = pd.read_csv(os.path.join('../','data_clean','census_clean.csv'))
 
 # Optional enhancement, use K-fold cross validation instead of a train-test split.
 train, test = train_test_split(data, test_size=0.20)
@@ -42,9 +42,9 @@ X_test, y_test, _, _ = process_data(
 
 model = train_model(X_train, y_train)
 
-pickle.dump(model, open('./model/classifier.pkl', 'wb'))
-pickle.dump(encoder, open('./model/encoder.pkl', 'wb'))
-pickle.dump(lb, open('./model/lb.pkl', 'wb'))
+pickle.dump(model, open('../model/classifier.pkl', 'wb'))
+pickle.dump(encoder, open('../model/encoder.pkl', 'wb'))
+pickle.dump(lb, open('../model/lb.pkl', 'wb'))
 
 
 def slice_data(df, cat_feature):
@@ -80,7 +80,7 @@ def slice_data(df, cat_feature):
     return results
 
 results_slice_metrics = slice_data(test, "education")
-with open("./output.txt","w") as file:
+with open("../output.txt","w") as file:
     file.write(json.dumps(results_slice_metrics))
 
 
