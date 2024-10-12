@@ -9,3 +9,4 @@ numpy
 uvicorn
 httpx
 dvc[aws]
+dvc_s3
