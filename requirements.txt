@@ -8,3 +8,4 @@ requests
 numpy
 uvicorn
 httpx
+dvc[aws]
