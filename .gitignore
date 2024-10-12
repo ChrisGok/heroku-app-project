@@ -1,5 +1,5 @@
 # model/
 __pycache__/
 .pytest_cache
-raw_data/census_raw.csv
-data_clean/census_clean.csv
+raw_data/
+data_clean/
