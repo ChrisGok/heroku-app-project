@@ -20,8 +20,7 @@ def train_model(X_train, y_train):
     model
         Trained machine learning model.
     """
-    # svc=SVC(probability=True, kernel='linear')
-    # logit = AdaBoostClassifier(n_estimators=50, base_estimator=svc, learning_rate=1, random_state=0)
+    
     logit = RandomForestClassifier(
         # n_estimators= 1000
         )

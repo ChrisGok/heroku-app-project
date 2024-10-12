@@ -17,8 +17,10 @@ test_data = {
         'native-country': 'United-States'
     }
 
-response = requests.post('https://cg-census-pred-app-prod-e1af23d4a843.herokuapp.com/', json=test_data) 
-print(response.status_code)
+response_get = requests.get('https://cg-census-pred-app-prod-e1af23d4a843.herokuapp.com/')
+print(response_get.json())
+
+response = requests.post('https://cg-census-pred-app-prod-e1af23d4a843.herokuapp.com/prediction', json=test_data) 
 assert response.status_code == 200
 
 print(response.status_code)
