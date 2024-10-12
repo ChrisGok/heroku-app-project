@@ -1,5 +1,6 @@
 [core]
     remote = s3_remote
+    hardlink_lock = true
 ['remote "myremote"']
     url = s3://dvc-bucket-cg-app
 ['remote "s3_remote"']
